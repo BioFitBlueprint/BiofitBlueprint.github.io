@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioFit Blueprint — 11 Fitness Questions, Answered</title>
+<meta name="description" content="Clear, actionable answers to the 11 fitness and health questions people search for most — nutrition, fat loss, muscle building, and more.">
+<meta name="theme-color" content="#16150f">
+<meta property="og:title" content="BioFit Blueprint — 11 Fitness Questions, Answered">
+<meta property="og:description" content="Clear, actionable answers to the fitness questions everyone searches — nutrition, fat loss, muscle building, and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2316150f'/%3E%3Crect x='46' y='20' width='8' height='60' fill='white'/%3E%3Crect x='20' y='46' width='60' height='8' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fdfdfb;
+    --card:#f5f4ee;
+    --line:#e2ded2;
+    --ink:#16150f;
+    --ink-soft:#56544a;
+    --ink-faint:#b7b3a4;
+    --max:720px;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono:'IBM Plex Mono', 'Courier New', monospace;
+    --header-h:60px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  ul,ol{list-style:none;}
+  img,svg{display:block;max-width:100%;}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+
+  /* progress bar */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--ink);z-index:1000;}
+
+  /* header */
+  .site-header{
+    position:sticky;top:0;z-index:900;height:var(--header-h);
+    display:flex;align-items:center;
+    background:rgba(253,253,251,.88);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;}
+  .logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;font-size:1rem;letter-spacing:-0.01em;}
+  .logo-mark{width:15px;height:15px;position:relative;flex-shrink:0;}
+  .logo-mark::before,.logo-mark::after{content:"";position:absolute;background:var(--ink);}
+  .logo-mark::before{left:6.5px;top:0;width:2px;height:15px;}
+  .logo-mark::after{top:6.5px;left:0;height:2px;width:15px;}
+  .header-cta{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s;}
+  .header-cta:hover{color:var(--ink);}
+
+  /* hero */
+  .hero{position:relative;padding:68px 0 52px;border-bottom:1px solid var(--line);overflow:hidden;}
+  .hero-grid{
+    position:absolute;inset:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:28px 28px;
+    -webkit-mask-image:linear-gradient(to bottom, black 35%, transparent 92%);
+    mask-image:linear-gradient(to bottom, black 35%, transparent 92%);
+    pointer-events:none;
+  }
+  .hero-content{position:relative;z-index:1;}
+  .reg{position:absolute;font-family:var(--font-mono);font-size:14px;color:var(--ink-faint);line-height:1;}
+  .reg.tl{top:-6px;left:0;}
+  .reg.tr{top:-6px;right:0;}
+  .reg.bl{bottom:4px;left:0;}
+  .reg.br{bottom:4px;right:0;}
+  .title-block{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:22px;}
+  .hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,7vw,3.6rem);letter-spacing:-0.02em;line-height:1.05;margin-bottom:20px;}
+  .hero-intro{font-size:1.08rem;color:var(--ink-soft);max-width:58ch;line-height:1.7;}
+
+  /* index / toc */
+  .index{padding:52px 0;border-bottom:1px solid var(--line);scroll-margin-top:var(--header-h);}
+  .index-label{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;}
+  .index-label strong{color:var(--ink);font-weight:600;}
+  .toc-row{display:flex;align-items:baseline;padding:14px 2px;border-bottom:1px solid var(--line);border-left:2px solid transparent;gap:10px;transition:border-color .2s, padding-left .2s;}
+  .toc-row:first-of-type{border-top:1px solid var(--line);}
+  .toc-index{font-family:var(--font-mono);font-size:.85rem;color:var(--ink-soft);min-width:40px;flex-shrink:0;}
+  .toc-index .of{color:var(--ink-faint);}
+  .toc-q{font-family:var(--font-body);font-weight:500;font-size:.98rem;color:var(--ink);}
+  .toc-leader{flex:1;border-bottom:1px dotted var(--ink-faint);margin:0 4px;transform:translateY(-5px);min-width:12px;}
+  .toc-arrow{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-faint);opacity:0;transition:opacity .2s;flex-shrink:0;}
+  .toc-row:hover,.toc-row.active{border-left-color:var(--ink);padding-left:10px;}
+  .toc-row:hover .toc-arrow,.toc-row.active .toc-arrow{opacity:1;color:var(--ink);}
+  .toc-row.active .toc-index{color:var(--ink);font-weight:600;}
+
+  /* posts */
+  .post{padding:60px 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--header-h) + 10px);}
+  .post:last-child{border-bottom:none;}
+  .q-index{font-family:var(--font-mono);font-size:.9rem;color:var(--ink-soft);display:inline-block;margin-bottom:16px;}
+  .q-index .of{color:var(--ink-faint);}
+  .post h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.45rem,3.6vw,2.05rem);letter-spacing:-0.01em;line-height:1.25;margin-bottom:16px;max-width:21ch;}
+  .post .lede{font-size:1.02rem;color:var(--ink-soft);max-width:62ch;}
+
+  .protocol{position:relative;background:var(--card);padding:24px 24px;margin:26px 0 22px;}
+  .protocol::before,.protocol::after{content:"";position:absolute;width:16px;height:16px;border-style:solid;border-color:var(--ink);border-width:0;}
+  .protocol::before{top:0;left:0;border-top-width:2px;border-left-width:2px;}
+  .protocol::after{bottom:0;right:0;border-bottom-width:2px;border-right-width:2px;}
+  .protocol-label{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:14px;color:var(--ink);}
+  .protocol-list{display:flex;flex-direction:column;gap:13px;}
+  .protocol-list li{position:relative;padding-left:22px;font-size:.96rem;color:var(--ink-soft);}
+  .protocol-list li::before{content:"–";position:absolute;left:0;top:0;color:var(--ink-faint);}
+  .protocol-list li strong{color:var(--ink);font-weight:600;}
+  .protocol-list .try{display:block;margin-top:4px;font-style:italic;color:var(--ink-soft);opacity:.85;}
+  .protocol-list.steps{counter-reset:step;}
+  .protocol-list.steps li{counter-increment:step;}
+  .protocol-list.steps li::before{content:counter(step) ".";font-family:var(--font-mono);font-weight:600;color:var(--ink-soft);}
+  .protocol p.plain{font-size:.96rem;color:var(--ink-soft);margin-bottom:12px;}
+  .protocol p.plain:last-child{margin-bottom:0;}
+
+  .ref{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft);display:inline-block;}
+  .ref .tag{color:var(--ink-faint);}
+
+  /* footer */
+  .site-footer{padding:52px 0 100px;text-align:center;}
+  .footer-note{font-size:.85rem;color:var(--ink-soft);max-width:52ch;margin:0 auto 22px;line-height:1.6;}
+  .footer-mark{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-faint);letter-spacing:.05em;text-transform:uppercase;}
+
+  /* back to top */
+  .top-btn{
+    position:fixed;bottom:20px;right:20px;
+    font-family:var(--font-mono);font-size:.74rem;letter-spacing:.02em;
+    background:var(--ink);color:var(--paper);border:none;cursor:pointer;
+    padding:10px 14px;
+    opacity:0;pointer-events:none;transform:translateY(6px);
+    transition:opacity .25s, transform .25s, background .2s;
+    z-index:850;
+  }
+  .top-btn.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .top-btn:hover{background:#000;}
+
+  @media (max-width:640px){
+    .hero{padding:52px 0 40px;}
+    .post{padding:44px 0;}
+    .index{padding:40px 0;}
+    .reg{display:none;}
+    .protocol{padding:20px 18px;}
+    .toc-q{font-size:.92rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"></span>BioFit Blueprint</a>
+    <a href="#index" class="header-cta">[ Contents ]</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-content">
+      <span class="reg tl" aria-hidden="true">+</span>
+      <span class="reg tr" aria-hidden="true">+</span>
+      <span class="reg bl" aria-hidden="true">+</span>
+      <span class="reg br" aria-hidden="true">+</span>
+      <div class="title-block">
+        <span>Doc BFB—01</span>
+        <span>Rev 2026.07</span>
+        <span>Scale N.T.S.</span>
+      </div>
+      <h1>BioFit Blueprint</h1>
+      <p class="hero-intro">Whether you're stepping into the gym for the first time or trying to level up your routine, figuring out fitness can feel like learning a foreign language. Below are the 11 questions people search for most — each broken into a clear, actionable blueprint you can start using today.</p>
+    </div>
+  </section>
+
+  <nav class="index" id="index" aria-label="Table of contents">
+    <div class="wrap">
+      <p class="index-label"><strong>Index</strong> — 11 entries</p>
+      <ol>
+        <li><a class="toc-row" href="#s1"><span class="toc-index">01<span class="of">/11</span></span><span class="toc-q">What Should I Eat Before and After a Workout?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s2"><span class="toc-index">02<span class="of">/11</span></span><span class="toc-q">How Do I Lose Belly Fat?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s3"><span class="toc-index">03<span class="of">/11</span></span><span class="toc-q">How Do I Build an Exercise Plan?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s4"><span class="toc-index">04<span class="of">/11</span></span><span class="toc-q">How Much Should I Work Out a Week?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s5"><span class="toc-index">05<span class="of">/11</span></span><span class="toc-q">What Exercises Are Good for Building Muscle?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s6"><span class="toc-index">06<span class="of">/11</span></span><span class="toc-q">Which Exercise Burns the Most Fat?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s7"><span class="toc-index">07<span class="of">/11</span></span><span class="toc-q">How Much Protein Do I Need?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s8"><span class="toc-index">08<span class="of">/11</span></span><span class="toc-q">Can I Lose Weight Without Exercising?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s9"><span class="toc-index">09<span class="of">/11</span></span><span class="toc-q">How Do I Get a Six-Pack?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s10"><span class="toc-index">10<span class="of">/11</span></span><span class="toc-q">What Is the Best Way to Lose Weight?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+        <li><a class="toc-row" href="#s11"><span class="toc-index">11<span class="of">/11</span></span><span class="toc-q">What Are the Best Workouts to Do at Home?</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-arrow" aria-hidden="true">→</span></a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <article>
+
+    <section class="post" id="s1">
+      <div class="wrap">
+        <span class="q-index">01<span class="of">/11</span></span>
+        <h2>What Should I Eat Before and After a Workout?</h2>
+        <p class="lede">Think of your body like a high-performance sports car. Before driving, you need quick fuel so you don't stall out. After a long drive, you need fuel to repair the engine and refill the tank.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <ul class="protocol-list">
+            <li><strong>30–60 minutes before:</strong> eat fast-digesting carbs with a small touch of protein for immediate energy.<span class="try">Try this: a banana with a spoonful of peanut butter, or oatmeal topped with berries.</span></li>
+            <li><strong>30–60 minutes after:</strong> eat a balanced meal rich in protein (to repair muscle tears) and carbs (to restock stored energy).<span class="try">Try this: chicken with rice and veggies, eggs on toast, or a protein shake blended with fruit.</span></li>
+          </ul>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> International Society of Sports Nutrition (ISSN)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s2">
+      <div class="wrap">
+        <span class="q-index">02<span class="of">/11</span></span>
+        <h2>How Do I Lose Belly Fat?</h2>
+        <p class="lede">Here's the honest truth: you cannot "spot-reduce" fat from just your stomach. Your body burns fat like pulling water out of a swimming pool — the water level drops evenly everywhere, not just in one corner. Doing 1,000 sit-ups strengthens your abs, but it won't melt the fat layer sitting on top of them.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Focus on lowering your overall body fat percentage. Stay in a consistent, mild calorie deficit — eating slightly fewer calories than your body burns each day. Pair healthy nutrition with 7–8 hours of sleep, plenty of water, and strength training to see total-body results.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Harvard Health Publishing</p>
+      </div>
+    </section>
+
+    <section class="post" id="s3">
+      <div class="wrap">
+        <span class="q-index">03<span class="of">/11</span></span>
+        <h2>How Do I Build an Exercise Plan?</h2>
+        <p class="lede">The secret to any successful workout program is progressive overload — a fancy term for making your workouts slightly harder over time so your body is forced to grow stronger.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <ol class="protocol-list steps">
+            <li><strong>Pick a schedule:</strong> choose 3–4 days a week that you can stick to consistently.</li>
+            <li><strong>Focus on big movements:</strong> build each session around 4–5 core exercises that hit big muscle groups — pushing, pulling, squatting, hinging.</li>
+            <li><strong>Set sets and reps:</strong> aim for 3 sets of 8–12 repetitions per exercise.</li>
+            <li><strong>Progress weekly:</strong> when 12 reps start feeling too easy, add a little extra weight or try for one extra rep next time.</li>
+          </ol>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> National Academy of Sports Medicine (NASM)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s4">
+      <div class="wrap">
+        <span class="q-index">04<span class="of">/11</span></span>
+        <h2>How Much Should I Work Out a Week?</h2>
+        <p class="lede">Working out 7 days a week actually slows down your progress. Muscles don't grow while you're lifting weights — they grow while you're resting, eating, and sleeping.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Aim for 3 to 5 days a week for about 45–60 minutes per session. Always schedule at least 2 full rest or light recovery days — like walking or light stretching — each week to avoid injury and burnout.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> American College of Sports Medicine (ACSM)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s5">
+      <div class="wrap">
+        <span class="q-index">05<span class="of">/11</span></span>
+        <h2>What Exercises Are Good for Building Muscle?</h2>
+        <p class="lede">You want to focus on compound exercises — movements that force multiple joints and muscles to work at the same time. These give you the most muscle activation in the shortest amount of time.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <ul class="protocol-list">
+            <li><strong>Legs:</strong> squats, Romanian deadlifts, lunges.</li>
+            <li><strong>Chest &amp; triceps:</strong> bench press, push-ups, dips.</li>
+            <li><strong>Back &amp; biceps:</strong> pull-ups, lat pulldowns, dumbbell rows.</li>
+            <li><strong>Shoulders:</strong> overhead presses, lateral raises.</li>
+          </ul>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Journal of Strength and Conditioning Research</p>
+      </div>
+    </section>
+
+    <section class="post" id="s6">
+      <div class="wrap">
+        <span class="q-index">06<span class="of">/11</span></span>
+        <h2>Which Exercise Burns the Most Fat?</h2>
+        <p class="lede">High-Intensity Interval Training (HIIT) and running burn the most calories per minute. However, the best exercise for long-term fat loss is whatever activity you enjoy enough to do consistently over months.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Combine strength training 3 days a week (to keep your muscle mass) with daily active movement. Aim for 8,000–10,000 steps a day. Walking is one of the ultimate fat-loss tools because it burns calories without leaving you exhausted or ravenous.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Mayo Clinic</p>
+      </div>
+    </section>
+
+    <section class="post" id="s7">
+      <div class="wrap">
+        <span class="q-index">07<span class="of">/11</span></span>
+        <h2>How Much Protein Do I Need?</h2>
+        <p class="lede">When you exercise, you create tiny, microscopic tears in your muscle fibers. Protein provides the essential building blocks (amino acids) your body uses to repair those tears so you come back stronger and firmer.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Target roughly 0.7–1.0 gram of protein per pound of body weight each day. If you weigh 150 lbs, aim for about 105–150 grams of protein daily, spread across meals — chicken, fish, eggs, Greek yogurt, tofu, beans, or protein shakes.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Journal of the International Society of Sports Nutrition</p>
+      </div>
+    </section>
+
+    <section class="post" id="s8">
+      <div class="wrap">
+        <span class="q-index">08<span class="of">/11</span></span>
+        <h2>Can I Lose Weight Without Exercising?</h2>
+        <p class="lede">Yes. Weight loss comes down to energy balance. If you eat fewer calories than your body burns living daily life, you will lose weight, even if you never step foot in a gym.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">While diet controls weight loss, adding resistance training ensures you lose fat instead of muscle. Keeping your muscle keeps your metabolism high and gives you a strong, toned physique.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> National Institutes of Health (NIH)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s9">
+      <div class="wrap">
+        <span class="q-index">09<span class="of">/11</span></span>
+        <h2>How Do I Get a Six-Pack?</h2>
+        <p class="lede">Everyone already has abdominal muscles. Visible abs are simply a matter of getting your overall body fat low enough for those muscles to show through your skin.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Treat your abs like any other muscle: train them 2–3 times a week with exercises like hanging leg raises, cable crunches, or planks. Pair that training with a sensible diet to lean down over time.</p>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> American Council on Exercise (ACE)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s10">
+      <div class="wrap">
+        <span class="q-index">10<span class="of">/11</span></span>
+        <h2>What Is the Best Way to Lose Weight?</h2>
+        <p class="lede">Avoid extreme crash diets that cut out entire food groups or starve you. Rapid weight loss usually leads to fast weight regain — slow and steady progress wins every time.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <ul class="protocol-list">
+            <li>Eat in a modest calorie deficit (roughly 300–500 calories below maintenance).</li>
+            <li>Prioritize high protein and high fiber — veggies, fruits, whole grains — to stay full.</li>
+            <li>Lift weights 3 times a week to keep your muscle.</li>
+            <li>Get 7–9 hours of quality sleep to control stress and hunger hormones.</li>
+          </ul>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Centers for Disease Control and Prevention (CDC)</p>
+      </div>
+    </section>
+
+    <section class="post" id="s11">
+      <div class="wrap">
+        <span class="q-index">11<span class="of">/11</span></span>
+        <h2>What Are the Best Workouts to Do at Home?</h2>
+        <p class="lede">You don't need expensive machines or a heavy gym membership to get in shape. Using your own body weight through a full range of motion builds solid, functional strength.</p>
+        <div class="protocol">
+          <p class="protocol-label">💡 The Action Plan</p>
+          <p class="plain">Try this simple 4-round bodyweight circuit at home:</p>
+          <ol class="protocol-list steps">
+            <li>10–15 push-ups (on toes or knees).</li>
+            <li>15–20 bodyweight squats.</li>
+            <li>10 chair dips (for triceps).</li>
+            <li>10 inverted rows (using a sturdy table or door frame).</li>
+            <li>45-second plank.</li>
+          </ol>
+        </div>
+        <p class="ref"><span class="tag">Ref —</span> Journal of Sports Science &amp; Medicine</p>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-note">BioFit Blueprint is for general educational purposes and isn't a substitute for advice from a doctor, dietitian, or certified trainer.</p>
+    <p class="footer-mark">BioFit Blueprint — Doc BFB—01</p>
+  </div>
+</footer>
+
+<button id="topBtn" class="top-btn" aria-label="Back to top">[ ↑ Top ]</button>
+
+<script>
+(function () {
+  var progress = document.getElementById('progress');
+  function updateProgress() {
+    var doc = document.documentElement;
+    var scrolled = window.scrollY || doc.scrollTop || 0;
+    var height = doc.scrollHeight - doc.clientHeight;
+    progress.style.width = (height > 0 ? (scrolled / height) * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  var topBtn = document.getElementById('topBtn');
+  function toggleTopBtn() {
+    if (window.scrollY > 700) {
+      topBtn.classList.add('visible');
+    } else {
+      topBtn.classList.remove('visible');
+    }
+  }
+  document.addEventListener('scroll', toggleTopBtn, { passive: true });
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  var rows = document.querySelectorAll('.toc-row');
+  var posts = document.querySelectorAll('.post');
+  if ('IntersectionObserver' in window && rows.length && posts.length) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        rows.forEach(function (r) {
+          r.classList.remove('active');
+          r.removeAttribute('aria-current');
+        });
+        var row = document.querySelector('.toc-row[href="#' + id + '"]');
+        if (row) {
+          row.classList.add('active');
+          row.setAttribute('aria-current', 'location');
+        }
+      });
+    }, { rootMargin: '-90px 0px -65% 0px', threshold: 0 });
+    posts.forEach(function (p) { obs.observe(p); });
+  }
+})();
+</script>
+
+</body>
+</html>
